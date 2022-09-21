@@ -1,7 +1,6 @@
-
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import ProductOverviewScreen from "../screens/shop/ProductOverviewScreen";
+import MovieOverviewScreen from "../screens/movies/MovieOverviewScreen";
 import Colors from "../constants/Colors";
 
 const stack = createNativeStackNavigator();
@@ -17,8 +16,8 @@ const StackNavigator = () => {
     >
       <stack.Group>
         <stack.Screen
-          name="ProductOverviewScreen"
-          component={ProductOverviewScreen}
+          name="MovieOverviewScreen"
+          component={MovieOverviewScreen}
         />
       </stack.Group>
     </stack.Navigator>
