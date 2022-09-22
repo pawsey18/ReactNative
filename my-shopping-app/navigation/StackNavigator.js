@@ -1,4 +1,3 @@
-
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import ProductOverviewScreen from "../screens/shop/ProductOverviewScreen";
@@ -16,10 +15,7 @@ const StackNavigator = () => {
       }}
     >
       <stack.Group>
-        <stack.Screen
-          name="ProductOverviewScreen"
-          component={ProductOverviewScreen}
-        />
+        <stack.Screen name="All products" component={ProductOverviewScreen} />
       </stack.Group>
     </stack.Navigator>
   );
