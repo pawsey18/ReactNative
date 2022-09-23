@@ -2,28 +2,36 @@ import Movie from "../models/movie";
 
 const MOVIES = [
   new Movie(
-    "274",
+    "1",
     "English",
     "Clarice Starling is a top student at the FBI",
-    "/rplLJ2hPcOQmkFhTqUte0MkEaO2.jpg",
+    "https://robohash.org/s",
     "1991-01-31",
     "The Silence of the Lambs"
   ),
   new Movie(
-    "4232",
+    "2",
     "English",
     "A killer clown ghost face begins killing off teens",
-    "/3O3klyyYpAZBBE4n7IngzTomRDp.jpg",
+    "https://m.media-amazon.com/images/I/7114ViRptyL._AC_SL1500_.jpg",
     "1999-01-31",
     "Scream"
   ),
   new Movie(
-    "14001",
+    "3",
     "English",
     "Jamie returns to his hometoen in search of answers",
-    "/3O3klyyYpAZBBE4n7IngzTomRDp.jpg",
+    "https://robohash.org/s",
     "2007-01-31",
     "Dead Silence"
+  ),
+  new Movie(
+    "4",
+    "English",
+    "Jamie returns to his hometoen in search of answers",
+    "https://images-na.ssl-images-amazon.com/images/I/71tFhdcC0XL.jpg",
+    "2007-01-31",
+    "It by Stephen King"
   )
 ];
 
