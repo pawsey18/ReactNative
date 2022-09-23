@@ -10,5 +10,5 @@ It was designed to have a simple UI allowing end-users to navigation from screen
 
 ## Key Benefit:
 
-🎯 The benefit of this application is that the users will be able to keep track in a more effienct way.
+🎯 The benefit of this application is that the users will be able to keep track of their movies in a more effienct way.
 
