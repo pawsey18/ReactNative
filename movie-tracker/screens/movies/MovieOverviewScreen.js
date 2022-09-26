@@ -3,7 +3,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import MovieItem from "../../components/MovieItem";
 
-const MovieOverviewScreen = (props) => {
+const MovieOverviewScreen = ({ navigation }) => {
   const movies = useSelector((state) => state.movies.availableMovies);
   return (
     <FlatList
@@ -14,7 +14,11 @@ const MovieOverviewScreen = (props) => {
           poster={itemData.item.poster}
           title={itemData.item.title}
           overview={itemData.item.overview}
-          onViewDetail={() => {}}
+          onViewDetail={() =>
+            navigation.navigate("MovieDetail", {
+              movieId: itemData.item.id
+            })
+          }
           onAddToCart={() => {}}
         />
       )}

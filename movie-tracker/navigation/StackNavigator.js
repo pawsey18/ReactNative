@@ -2,7 +2,7 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import MovieOverviewScreen from "../screens/movies/MovieOverviewScreen";
 import Colors from "../constants/Colors";
-
+import MovieDetailScreen from "../screens/movies/MovieDetailScreen";
 const stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
@@ -20,6 +20,7 @@ const StackNavigator = () => {
           component={MovieOverviewScreen}
         />
       </stack.Group>
+      <stack.Screen name="MovieDetail" component={MovieDetailScreen} />
     </stack.Navigator>
   );
 };

@@ -18,11 +18,7 @@ const StackNavigator = () => {
       <stack.Group>
         <stack.Screen name="All products" component={ProductOverviewScreen} />
       </stack.Group>
-      <stack.Screen
-        name="Profile"
-        options={"Hello"}
-        component={ProductDetailScreen}
-      />
+      <stack.Screen name="ProductDetail" component={ProductDetailScreen} />
     </stack.Navigator>
   );
 };
