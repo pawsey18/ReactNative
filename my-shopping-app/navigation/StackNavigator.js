@@ -11,14 +11,15 @@ const StackNavigator = () => {
     <stack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: Colors.primary
+          backgroundColor: Colors.primary,
+          fontFamily: "OpenSansBold"
         }
       }}
     >
       <stack.Group>
         <stack.Screen name="All products" component={ProductOverviewScreen} />
       </stack.Group>
-      <stack.Screen name="ProductDetail" component={ProductDetailScreen} />
+      <stack.Screen name="Product Detail" component={ProductDetailScreen} />
     </stack.Navigator>
   );
 };

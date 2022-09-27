@@ -15,7 +15,7 @@ const ProductOverviewScreen = ({ navigation }) => {
           title={itemData.item.title}
           price={itemData.item.price}
           onViewDetail={() =>
-            navigation.navigate("ProductDetail", {
+            navigation.navigate("Product Detail", {
               productId: itemData.item.id
             })
           }

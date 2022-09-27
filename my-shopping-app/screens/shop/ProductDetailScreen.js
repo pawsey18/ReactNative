@@ -8,10 +8,10 @@ import {
 } from "react-native";
 import React from "react";
 import { useSelector } from "react-redux";
-
+import colors from "../../constants/Colors";
 const ProductDetailScreen = (props) => {
   const productId = props.route.params.productId;
-  // selecting a single product.
+
   const selectedProduct = useSelector((state) =>
     state.products.availableProducts.find((p) => p.id === productId)
   );
@@ -19,7 +19,9 @@ const ProductDetailScreen = (props) => {
   return (
     <ScrollView>
       <Image style={styles.image} source={{ uri: selectedProduct.imageUrl }} />
-      <Button title="Add to Cart" onPress={() => {}} />
+      <View style={styles.actions}>
+        <Button color={colors.primary} title="Add to Cart" onPress={() => {}} />
+      </View>
       <Text style={styles.price}>${selectedProduct.price.toFixed(2)}</Text>
       <Text style={styles.description}>{selectedProduct.description}</Text>
     </ScrollView>
@@ -31,15 +33,22 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 300
   },
+  actions: {
+    marginVertical: 10,
+    alignItems: "center"
+  },
   price: {
+    fontFamily: "OpenSansBold",
     fontSize: 20,
     color: "#888",
     textAlign: "center",
     marginVertical: 20
   },
-  description: { 
+  description: {
+    fontFamily: "OpenSansBold",
     fontSize: 14,
-    textAlign: 'center'
+    textAlign: "center",
+    marginHorizontal: 20
   }
 });
 

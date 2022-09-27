@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     elevation: 5,
     borderRadius: 10,
     backgroundColor: "white",
-    height: 300,
+    height: 350,
     margin: 20
   },
   imageContainer: {
@@ -63,11 +63,14 @@ const styles = StyleSheet.create({
     height: "60%",
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
-    overflow: "hidden"
+    overflow: "hidden",
+    justifyContent: "center"
   },
   image: {
-    width: "100%",
-    height: "100%"
+    width: 200,
+    height: 230,
+    justifyContent: "center",
+    marginLeft: "25%"
   },
   details: {
     alignItems: "center",
@@ -76,9 +79,11 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 18,
-    marginVertical: 4
+    marginVertical: 4,
+    fontFamily: "OpenSansBold"
   },
   price: {
+    fontFamily: "OpenSansBold",
     fontSize: 14,
     color: "#888"
   },
