@@ -3,11 +3,14 @@ import { NavigationContainer } from "@react-navigation/native";
 import StackNavigator from "./navigation/StackNavigator";
 import { createStore, combineReducers } from "redux";
 import { Provider } from "react-redux";
+
+import cartReducer from "./store/reducers/cart";
 import productsReducer from "./store/reducers/products";
 import * as Font from "expo-font";
 
 const rootReducer = combineReducers({
-  products: productsReducer
+  products: productsReducer,
+  cart: cartReducer
 });
 
 const store = createStore(rootReducer);
