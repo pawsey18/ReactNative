@@ -8,7 +8,7 @@ import CartScreen from "../screens/shop/CartScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 const stack = createNativeStackNavigator();
 
-const StackNavigator = (props) => {
+const StackNavigator = () => {
   return (
     <stack.Navigator
       screenOptions={{
@@ -19,16 +19,13 @@ const StackNavigator = (props) => {
         headerTitleStyle: {
           fontFamily: "OpenSansBold",
           color: "white"
-        },
-        headerRight: () => (
-          <HeaderButtons HeaderButtonComponent={HeaderButton}>
-            <Item
-              title="Cart"
-              iconName={"md-cart"}
-              onPress={() => props.navigation.navigate("Cart")}
-            />
-          </HeaderButtons>
-        )
+        }
+        // ,
+        // headerRight: () => (
+        //   <HeaderButtons HeaderButtonComponent={HeaderButton}>
+        //     <Item title="Cart" iconName={"md-cart"} />
+        //   </HeaderButtons>
+        // )
       }}
     >
       <stack.Group>
@@ -36,7 +33,11 @@ const StackNavigator = (props) => {
       </stack.Group>
 
       <stack.Screen name="Product Detail" component={ProductDetailScreen} />
-      <stack.Screen name="Cart" component={CartScreen} />
+      <stack.Screen
+        name="Cart"
+        component={CartScreen}
+        onPress={() => console.log("hello")}
+      />
     </stack.Navigator>
   );
 };

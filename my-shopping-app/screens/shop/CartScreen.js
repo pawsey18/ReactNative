@@ -3,7 +3,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import Colors from "../../constants/Colors";
 
-const CartScreen = ({ navigation }) => {
+const CartScreen = () => {
   const cartTotalAmount = useSelector((state) => state.cart.totalAmount);
   return (
     <View style={styles.screen}>

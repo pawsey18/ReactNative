@@ -22,7 +22,7 @@ const store = createStore(rootReducer);
 //   });
 // };
 
-export default function App() {
+export default function App(props) {
   const [loaded] = Font.useFonts({
     OpenSansBold: require("./assets/fonts/OpenSans-Bold.ttf")
   });
@@ -34,6 +34,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
+      
         <StackNavigator />
       </NavigationContainer>
     </Provider>
