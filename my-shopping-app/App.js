@@ -34,7 +34,6 @@ export default function App(props) {
   return (
     <Provider store={store}>
       <NavigationContainer>
-      
         <StackNavigator />
       </NavigationContainer>
     </Provider>
