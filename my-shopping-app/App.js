@@ -1,16 +1,19 @@
-import React, { useState } from "react";
+import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import StackNavigator from "./navigation/StackNavigator";
 import { createStore, combineReducers } from "redux";
 import { Provider } from "react-redux";
-
+import ordersReducer from "./store/reducers/order";
 import cartReducer from "./store/reducers/cart";
 import productsReducer from "./store/reducers/products";
+import { HeaderButtons, Item } from "react-navigation-header-buttons";
+import Home from "./components/UI/Home";
 import * as Font from "expo-font";
 
 const rootReducer = combineReducers({
   products: productsReducer,
-  cart: cartReducer
+  cart: cartReducer,
+  orders: ordersReducer
 });
 
 const store = createStore(rootReducer);
@@ -35,6 +38,7 @@ export default function App(props) {
     <Provider store={store}>
       <NavigationContainer>
         <StackNavigator />
+       
       </NavigationContainer>
     </Provider>
   );

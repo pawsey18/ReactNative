@@ -2,10 +2,12 @@ import React from "react";
 import ProductOverviewScreen from "../screens/shop/ProductOverviewScreen";
 import Colors from "../constants/Colors";
 import ProductDetailScreen from "../screens/shop/ProductDetailScreen";
-import { HeaderButtons, Item } from "react-navigation-header-buttons";
-import HeaderButton from "../components/UI/HeaderButton";
 import CartScreen from "../screens/shop/CartScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import OrdersScreen from "../screens/shop/OrdersScreen";
+import Home from "../components/UI/Home";
+
+//const Drawer = createDrawerNavigator();
 const stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
@@ -20,24 +22,19 @@ const StackNavigator = () => {
           fontFamily: "OpenSansBold",
           color: "white"
         }
-        // ,
-        // headerRight: () => (
-        //   <HeaderButtons HeaderButtonComponent={HeaderButton}>
-        //     <Item title="Cart" iconName={"md-cart"} />
-        //   </HeaderButtons>
-        // )
       }}
     >
       <stack.Group>
-        <stack.Screen name="All products" component={ProductOverviewScreen} />
+        <stack.Screen name="Home" component={Home} />
+        <stack.Screen
+          name="Product Overview"
+          component={ProductOverviewScreen}
+        />
       </stack.Group>
 
       <stack.Screen name="Product Detail" component={ProductDetailScreen} />
-      <stack.Screen
-        name="Cart"
-        component={CartScreen}
-        onPress={() => console.log("hello")}
-      />
+      <stack.Screen name="Cart" component={CartScreen} />
+      <stack.Screen name="order" component={OrdersScreen} />
     </stack.Navigator>
   );
 };

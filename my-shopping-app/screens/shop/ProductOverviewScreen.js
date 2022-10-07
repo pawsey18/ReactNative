@@ -4,9 +4,11 @@ import { useSelector, useDispatch } from "react-redux";
 import ProductItem from "../../components/shop/ProductItem";
 import * as cartActions from "../../store/actions/cart";
 import HeaderButton from "../../components/UI/HeaderButton";
+
 const ProductOverviewScreen = ({ navigation }) => {
   const products = useSelector((state) => state.products.availableProducts);
   const dispatch = useDispatch();
+
   var cartRoute = () => {
     return navigation.navigate("Cart");
   };
@@ -60,11 +62,12 @@ import { HeaderButtons, Item } from "react-navigation-header-buttons";
 //   )
 // };
 
-// ProductOverviewScreen.screenOptions={
+// ProductOverviewScreen.screenOptions = {
 //   headerTitleStyle: {
 //     fontFamily: "OpenSansBold",
 //     color: "white"
-//    },
+//   },
+//   name: "hello fff",
 //   headerRight: () => (
 //     <HeaderButtons HeaderButtonComponent={HeaderButton}>
 //       <Item
@@ -76,6 +79,6 @@ import { HeaderButtons, Item } from "react-navigation-header-buttons";
 //       />
 //     </HeaderButtons>
 //   )
-// }
+// };
 
 export default ProductOverviewScreen;
